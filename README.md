@@ -1,50 +1,23 @@
-# React + TypeScript + Vite
+# 📇 Contact List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um aplicativo simples de lista de contatos desenvolvido com React, Redux, e TypeScript. Ele permite adicionar, editar e remover contatos, com validação de formulários e controle de estado centralizado usando Redux.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **➕ Adicionar Contato**: Permite adicionar um novo contato à lista com nome completo, e-mail e telefone.
+- **✏️ Editar Contato**: Permite editar as informações de um contato existente.
+- **❌ Remover Contato**: Permite excluir um contato da lista.
+- **✅ Validação de Formulários**: O formulário de contato possui validações para garantir que o nome completo seja inserido corretamente e que o telefone contenha apenas números.
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Biblioteca para construção de interfaces de usuário.
+- **Redux Toolkit**: Biblioteca para gerenciar o estado global da aplicação.
+- **TypeScript**: Tipagem estática do JS.
+- **Styled Components**: Utilizado para a estilização dos componentes de forma modular e reutilizável.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+📂 Estrutura de Pastas
+- **src/components**: Contém os componentes principais `Form` e `List`
+- **src/store**: Contém os reducers do Redux e a configuração do store.
+- **src/types**: Contém os tipos TypeScript para os contatos e outros objetos.
+- **src/styles**: Contém os arquivos de estilização utilizando Styled Components.
